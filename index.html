@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  
+  <!-- Tailwind CSS (optional, if you want to keep it) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.6/dist/sweetalert2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Smooth Scrolling -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "Yz5yo18bx_bXcmm6gS",
+      });
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+    <div class="container">
+      <span class="navbar-brand text-indigo-600 font-bold">Portfolio</span>
+      
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link text-gray-700" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700" href="#contact">Contact</a></li>
+        </ul>
+        
+        <!-- Download CV Button -->
+        <a id="downloadCV" href="assets/CV.pdf" download class="btn btn-primary ml-4">Download CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative py-28 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-md-6">
+          <h1 class="display-3 font-weight-bold mb-4">
+            Hi<span class="text-yellow-300">there,</span><br />
+            i'm<span class="text-pink-300">Dayaat</span>
+          </h1>
+          <p class="lead mb-4 text-gray-200">
+            I provide creative design solutions to transform your ideas into visually stunning results.
+          </p>
+          <div class="mt-4">
+            <class="btn btn-lg btn-warning text-gray-900 px-5 py-3 font-weight-bold shadow-lg>
+            </a>
+            <class="btn btn-lg btn-outline-light ml-3 px-5 py-3 font-weight-bold shadow-lg>
+              
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Content -->
+        <div class="col-md-6">
+          <div class="relative">
+            <img src="Foto2.jpg" alt="Profile Picture" class="rounded-lg shadow-lg img-fluid">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-transparent opacity-30 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Background Elements -->
+    <div class="absolute top-10 left-10 bg-yellow-300 w-20 h-20 rounded-full blur-xl opacity-40"></div>
+    <div class="absolute bottom-20 right-20 bg-pink-400 w-40 h-40 rounded-full blur-2xl opacity-50"></div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-28 bg-light">
+    <div class="container text-center">
+      <h2 class="display-4 mb-4">About Us</h2>
+      <p class="lead text-muted">
+        I am a passionate designer and developer dedicated to delivering creative and innovative solutions for businesses. With years of experience, I help my clients achieve success through exceptional digital strategies, modern design, and powerful web technologies.      
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-28 bg-gradient-to-r from-blue-500 to-purple-600 text-white" data-aos="fade-in">
+    <div class="container">
+      <h2 class="display-4 mb-6 text-center font-weight-bold text-yellow-300">Portfolio</h2>
+      <p class="text-center text-gray-200 mb-5">
+        A showcase of our recent projects and creative works.
+      </p>
+      <div class="row" id="portfolioItems">
+        <!-- Portfolio items dynamically generated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Background Decorations -->
+    <div class="absolute top-0 left-0 bg-yellow-300 w-32 h-32 rounded-full blur-2xl opacity-40"></div>
+    <div class="absolute bottom-10 right-20 bg-pink-400 w-40 h-40 rounded-full blur-xl opacity-50"></div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-28 bg-white" data-aos="fade-in">
+    <div class="container">
+      <h2 class="display-4 text-center mb-12">Skills</h2>
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="card shadow transition-transform transform hover:scale-105 hover">
+            <div class="card-body">
+              <i class="bi bi-graph-up arrow-up"></i>
+              <h5 class="card-title">Strategy & Direction</h5>
+              <p class="card-text text-muted">Crafting effective strategies for success.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow transition-transform transform hover:scale-105 hover">
+            <div class="card-body">
+              <i class="bi bi-palette"></i>
+              <h5 class="card-title">Branding & Logo</h5>
+              <p class="card-text text-muted">Creating unique and impactful brand identities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow transition-transform transform hover:scale-105 hover">
+            <div class="card-body">
+              <i class="bi bi-diagram-3"></i>
+              <h5 class="card-title">UI & UX Design</h5>
+              <p class="card-text text-muted">Delivering seamless and engaging user experiences.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="card shadow transition-transform transform hover:scale-105 hover">
+            <div class="card-body">
+              <i class="bi bi-code-slash"></i>
+              <h5 class="card-title">Webflow Development</h5>
+              <p class="card-text text-muted">Building responsive and modern websites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-28 bg-gradient-to-r from-blue-500 to-purple-600 text-white" data-aos="fade-in">
+    <div class="container">
+      <h2 class="display-4 mb-6 text-center font-weight-bold text-yellow-300">Contact</h2>
+      <form id="contactForm" class="space-y-4" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <input type="text" id="name" class="form-control py-3 px-4 rounded-lg text-gray-900" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" class="form-control py-3 px-4 rounded-lg text-gray-900" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" class="form-control py-3 px-4 rounded-lg text-gray-900" rows="4" placeholder="Message" required></textarea>
+        </div>
+        <button type="submit" onclick="sendmail()" class="btn btn-warning w-100 py-3 font-weight-bold rounded-lg shadow-lg">Send</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <!-- Bootstrap and JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init();
+
+    // Handle form submission with SweetAlert2
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      // Retrieve form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Trigger SweetAlert2 popup on successful form submission
+      Swal.fire({
+        title: 'Thank you for reaching out!',
+        text: `Your message has been sent. We will get back to you soon.`,
+        icon: 'success',
+        confirmButtonText: 'Close',
+      });
+
+      // Optionally reset the form after submission
+      document.getElementById('contactForm').reset();
+    }
+
+    // Dynamic Portfolio Items
+    const portfolioItems = [
+      { title: 'Project 1', imgSrc: 'Foto3.jpg' },
+      { title: 'Project 2', imgSrc: 'Foto4.jpg' },
+      { title: 'Project 3', imgSrc: 'Foto5.jpg' },
+    ];
+
+    const portfolioContainer = document.getElementById('portfolioItems');
+    portfolioItems.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'col-md-4 mb-4';
+      div.innerHTML = `
+        <div class="card shadow" data-aos="fade-up">
+          <img src="${item.imgSrc}" alt="${item.title}" class="card-img-top rounded-t-lg">
+          <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+          </div>
+        </div>
+      `;
+      portfolioContainer.appendChild(div);
+    });
+  </script>
+  <!-- Footer Section -->
+<footer class="py-6 bg-dark text-white">
+  <div class="container text-center">
+    <p class="mb-2">Follow me on:</p>
+    <div class="mb-3">
+      <a href="https://mail.google.com/mail" class="btn btn-outline-light btn-sm mx-2" target="_blank">
+        <i class="bi bi-envelope"></i> Gmail
+      </a>
+      <a href="https://x.com/Dayataa_" class="btn btn-outline-light btn-sm mx-2" target="_blank">
+        <i class="bi bi-twitter"></i> Twitter
+      </a>
+      <a href="https://github.com/Steveenb" class="btn btn-outline-light btn-sm mx-2" target="_blank">
+        <i class="bi bi-github"></i> Github
+      </a>
+      <a href="https://www.instagram.com/dayataa_/" class="btn btn-outline-light btn-sm mx-2" target="_blank">
+        <i class="bi bi-instagram"></i> Instagram
+      </a>
+    </div>
+    <p class="mb-0">&copy; 2024 Dayaat. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
